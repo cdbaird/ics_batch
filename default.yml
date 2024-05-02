@@ -1,0 +1,47 @@
+# Default input file template
+
+control:
+  lcfa: false
+  radiation_reaction: false
+  pair_creation: false
+
+laser:
+  a0: 0.5
+  wavelength: 0.8 * micro
+  fwhm_duration: 30.0 * femto
+  #n_cycles: 110
+  waist: 10 * micro
+  polarization: linear
+
+beam:
+  ne: 5000000
+  charge: e
+  species: electron
+  gamma: 90 / 0.511
+  sigma: 90 / 0.511 * 0.1
+  radius: 1.0 * micro
+  length: 1.0 * micro
+  rms_divergence: 1.7 * milli 
+  collision_angle: 5.0 * degree
+
+output:
+  dump_all_particles: hdf5
+  max_angle: 30.0 * milli
+  coordinate_system: beam
+  # file_format: fits
+  # electron:
+  #   - energy
+  # photon:
+  #   - angle_x:angle_y
+  #   - angle_x:angle_y:(energy)
+
+# stats:
+#   electron:
+#     - mean gamma
+#   photon:
+#     - variance angle_x`energy
+#     - variance angle_y`energy
+
+# constants:
+#   a0: 0.5
+#   gamma: 90 / 0.511
